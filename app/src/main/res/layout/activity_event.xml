@@ -4,29 +4,58 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="eu.tamere.jeudidulibre.EventActivity">
 
     <ImageView
         android:id="@+id/event_image"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/event_title"
+    <!-- https://stackoverflow.com/questions/12128331/how-to-change-fontfamily-of-textview-in-android
+         android:fontFamily="sans-serif"           // roboto regular
+         android:fontFamily="sans-serif-light"     // roboto light
+         android:fontFamily="sans-serif-condensed" // roboto condensed
+         android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
+         android:fontFamily="sans-serif-medium"    // roboto medium (android 5.0) -->
+
+    <!-- http://www.google.com/design/spec/style/typography.html#typography-standard-styles -->
+
+    <!-- http://android-developers.blogspot.be/2014/10/implementing-material-design-in-your.html -->
+    <!-- http://android-developers.blogspot.be/2014/10/appcompat-v21-material-design-for-pre.html -->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/md_pink_500"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
 
-    <TextView
-        android:id="@+id/event_speaker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"/>
 
+        <!-- Subhead: Regular 16sp -->
+        <TextView
+            android:id="@+id/event_speaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"/>
+    </LinearLayout>
+
+    <!-- Body 1: Regular 14sp -->
     <TextView
         android:id="@+id/event_description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Body2"
+        android:textColor="@color/md_black_1000"/>
 </LinearLayout>
