@@ -39,14 +39,13 @@ public class EventActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
+        MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_event, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 Intent parentIntent = getParentActivityIntent();

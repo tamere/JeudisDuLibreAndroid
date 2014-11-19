@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-       // Toast.makeText(this, eventsAdapter.getItem(position).description, Toast.LENGTH_LONG).show();
+        // Toast.makeText(this, eventsAdapter.getItem(position).description, Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, EventActivity.class);
         intent.putExtra(EventActivity.EVENT, eventsAdapter.getItem(position));
         startActivity(intent);
