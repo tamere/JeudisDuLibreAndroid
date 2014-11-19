@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="eu.tamere.jeudidulibre" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="eu.tamere.jeudidulibre.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+
+                <!-- MAIN action is a main entry point (not requiring any other information in the Intent -->
+                <!-- LAUNCHER category says that this entry point should be listed in the application launcher. -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="eu.tamere.jeudidulibre.EventActivity"
+            android:label="@string/title_activity_event" >
+        </activity>
+    </application>
+
+</manifest>
