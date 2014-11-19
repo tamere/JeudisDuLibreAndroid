@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class EventsAdapter extends ArrayAdapter<Event> {
 
@@ -22,9 +25,16 @@ public class EventsAdapter extends ArrayAdapter<Event> {
             convertView = inflater.inflate(R.layout.list_item_event, null);
         }
 
-        TextView eventTitle = (TextView) convertView.findViewById(R.id.event_title);
+        Event event = getItem(position);
 
-        eventTitle.setText(getItem(position).title);
+        TextView eventTitle = (TextView) convertView.findViewById(R.id.event_title);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.event_image);
+
+        Picasso.with(getContext())
+                .load(event.pictureUrl)
+                .into(imageView);
+
+        eventTitle.setText(event.title);
 
         return convertView;
     }
