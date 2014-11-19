@@ -43,6 +43,9 @@ public class EventActivity extends Activity {
         Picasso.with(this)
                 .load(event.pictureUrl)
                 .into(imageView);
+
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

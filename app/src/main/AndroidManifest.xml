@@ -23,7 +23,8 @@
         </activity>
         <activity
             android:name="eu.tamere.jeudidulibre.EventActivity"
-            android:label="@string/title_activity_event" >
+            android:label="@string/title_activity_event"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 
