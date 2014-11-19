@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <style name="AppTheme" parent="android:Theme.Material.Light">
+        <!-- See https://developer.android.com/training/material/theme.html -->
+        <!-- And http://www.google.com/design/spec/style/color.html#color-color-palette -->
+        <item name="android:colorPrimary">@color/md_pink_500</item>
+        <item name="android:colorPrimaryDark">@color/md_pink_700</item>
+        <item name="android:navigationBarColor">@color/md_pink_700</item>
+        <item name="android:textColorPrimary">@color/md_white_1000</item>
+        <item name="android:windowBackground">@color/md_white_1000</item>
     </style>
 </resources>
