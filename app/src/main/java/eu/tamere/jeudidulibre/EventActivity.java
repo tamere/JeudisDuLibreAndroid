@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class EventActivity extends Activity {
     public final static String EVENT = "serialized-event";
 
@@ -35,6 +37,12 @@ public class EventActivity extends Activity {
         eventTitle.setText(event.title);
         eventDescription.setText(event.description);
         eventSpeaker.setText(event.speaker);
+
+        ImageView imageView = (ImageView) findViewById(R.id.event_image);
+
+        Picasso.with(this)
+                .load(event.pictureUrl)
+                .into(imageView);
     }
 
     @Override
