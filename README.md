@@ -11,3 +11,11 @@ This app:
 # Danger
 
 Beware that this implementation is very fragile and do not always reflect Android Best Practices (e.g., no handling of network error, no `ViewHolder` pattern for Adapter).
+
+
+# TODO
+
+* Replace ActionBar with Toolbar
+* Make it translucent
+* Use AppCompat to get most of the Material Design to previous Android version
+* Use shared element for transition animation between Activities
